@@ -26,7 +26,6 @@ const particlesOptions = {
     }
   }
 };
-
 const initialState = {
   input: "",
   imageUrl: "",
@@ -41,7 +40,6 @@ const initialState = {
     joined: ""
   }
 };
-
 class App extends Component {
   constructor() {
     super();
@@ -102,8 +100,7 @@ class App extends Component {
               this.setState(
                 Object.assign(this.state.user, { entries: count.entries })
               );
-            })
-            .catch(console.log);
+            });
         }
         this.displayFaceBox(this.calculateFaceLocation(response));
       })
